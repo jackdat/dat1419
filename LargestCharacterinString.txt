@@ -1,1 +1,27 @@
+/*package whatever //do not write package name here */
 
+import java.io.*;
+import java.util.*;
+
+class GFG {
+ 
+// Function to return the smallest String
+    static String smallest(String s) {
+        int l = s.length();
+        String ans = "";
+ 
+        char[] schars = s.toCharArray();
+        Arrays.sort(schars);
+        String sorted = new String(schars);
+        // leave the last character
+        ans = sorted.substring(0, l - 1);
+        return ans;
+    }
+ 
+// Driver Code
+    public static void main(String[] args) {
+ 
+        String s = "aaaaa";
+        System.out.println(smallest(s));
+    }
+}
